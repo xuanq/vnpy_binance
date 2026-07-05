@@ -637,8 +637,6 @@ class RestApi(RestClient):
             if account.balance:
                 self.gateway.on_account(account)
 
-        self.gateway.write_log("Account data received")
-
     def on_query_position(self, data: list, request: Request) -> None:
         """
         Callback of holding positions query.
